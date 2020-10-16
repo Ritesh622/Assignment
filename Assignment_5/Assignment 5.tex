@@ -352,6 +352,51 @@ So,
 \end{align}
 
 
+\subsection{QR decomposition of $\vec{V}$}
+We have ,
+\begin{equation}
+\vec{V} = \myvec{1 & -1\\ -1 & 1}
+\end{equation}
+%\subsection{{Solution}}
+Let $\vec{x}$ and $\vec{y}$ be the column vectors of the given matrix.
+\begin{align}
+\vec{x} &= \myvec{1 \\-1 }\\
+\vec{y} &= \myvec{-1 \\ 1}
+\end{align}
+The column vectors can be expressed as follows,
+\begin{align}
+\vec{x} &= k_1\vec{u}_1\label{eq_QR1}\\
+\vec{y} &= r_1\vec{u}_1+k_2\vec{u}_2\label{eq_QR2}
+\end{align}
+\begin{align}
+k_1 &= \norm{\vec{x}}\label{eq2.6}\\
+\vec{u}_1 &= \frac{\vec{x}}{k_1} \label{eq2.7}\\
+r_1 &= \frac{\vec{u}_1^T\vec{y}}{\norm{\vec{u}_1}^2} \label{eq2.8} \\
+\vec{u}_2 &= \frac{\vec{y} - r_1 \vec{u}_1}{\norm{\vec{y} - r_1 \vec{u}_1}} \label{eq2.9}\\
+k_2 &= {\vec{u}_2^T\vec{y}}\label{eq2.10}
+\end{align}
+The \eqref{eq_QR1} and \eqref{eq_QR2} can be written as, 
+\begin{align}
+\myvec{\vec{x} & \vec{y}} &= \myvec{\vec{u}_1 & \vec{u}_2}\myvec{k_1 & r_1 \\ 0 & k_2}\label{QRMain}\\
+\myvec{\vec{x} & \vec{y}} &= \vec{Q}\vec{R}
+\end{align}
+
+Now using equations \eqref{eq2.6} to \eqref{eq2.10} we get, 
+\begin{align}
+k_1 &= \sqrt{1^2+\left( -1\right)^2} = \sqrt{2}\label{eqval1}\\ 
+\vec{u}_1 &= \myvec{\frac{1}{\sqrt{2}}\\ \\ \frac{-1}{\sqrt{2}}} \\
+r_1 &= \myvec{\frac{1}{\sqrt{2}}&&\frac{-1}{\sqrt{2}}}\myvec{-1 \\ 1} = -\sqrt{2}\\ 
+\end{align}
+Similarly using equation \eqref{eq2.8}, we can have 
+\begin{align}
+\vec{u}_2 &= \myvec{0 \\  1} \\
+k_2 &= \myvec{0 & 1 }\myvec{-1\\1} = 1\label{eqval2} 
+\end{align}
+Thus putting the values from \eqref{eqval1} to \eqref{eqval2} in \eqref{QRMain} we obtain QR decomposition,
+\begin{align}
+\myvec{1 & -1 \\\\ -1 & 1} =\myvec{\frac{1}{\sqrt{2}}& 0 \\\\ -\frac{1}{\sqrt{2}} & 1 }\myvec{\sqrt{2} & -\sqrt{2} \\\\ 0 & 1 }
+\end{align}
+
 
 \end{document}
 
