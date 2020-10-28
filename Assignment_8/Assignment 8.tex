@@ -181,6 +181,20 @@ Now given transformation can be written as :
 \textbf{T}(x_1, x_2) = \vec{P}\vec{A}\vec{Q}\\
  \implies \textbf{T}(x_1, x_2) = \myvec{1\\1}\myvec{x_1 & x_2}\myvec{x_1 & 0 \\ 0 &1}
 \end{align}
-We can observe that matrix $\vec{Q}$ is not a fixed matrix. Hence we can conclude  that given transformation is not linear.
- 
+We can observe that matrix $\vec{Q}$ is not a fixed matrix. Hence we can conclude  that given transformation is not linear.\\
+ \begin{align}
+ \intertext{Let}
+ \textbf{T} (1,0) =  \myvec{1\\1}\myvec{1 & 0}\myvec{1 & 0 \\ 0 &1}\\
+ \implies \textbf{T}(1,0) = (1,0) \\ 
+  \textbf{T} (-1,0) =  \myvec{1\\1}\myvec{-1 & 0}\myvec{-1 & 0 \\ 0 &1}\\
+ \implies \textbf{T}(-1,0) = (1,0)
+ \end{align}
+  If \textbf{T} were a linear transformation then we would have
+ \begin{align}
+    \textbf{T}((1, 0)) = (1,0)\\ 
+  \implies T( -1(1, 0))  = -1. \textbf{T}(1,0)\\
+   \implies -1.(1, 0) = (-1, 0) \\
+  \intertext{which is a contradiction, since}(1, 0) \neq (-1, 0).
+\end{align}
+  Hence non-linear transformation.
 \end{document}
