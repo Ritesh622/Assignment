@@ -159,20 +159,21 @@ Let\textbf{T} and \textbf{U} be the linear operators  on $\mathbb{R}^2$  defined
 
 
 Geometrically, in the x-y plane, \textbf{T} is the reflection about the diagonal x = y and \textbf{U} is a projection onto the x-axis.\\ 
-%\begin{align}
-%\intertext{Let Consider Matrix A as} \vec{A} = \myvec{0 & 1 \\ 1 & 0 } 
-%\end{align}
-%The matrix  $\vec{A}$ is representation  of the linear transformation T across the line y=x with respect to the standard basis.
+\begin{align}
+\intertext{Let Consider Matrix A as} \vec{A} = \myvec{0 & 1 \\ 1 & 0 } 
+\end{align}
+The matrix  $\vec{A}$ is representation  of the linear transformation T across the line y=x with respect to the standard basis.
 \begin{align}
 \intertext{Let suppose}\vec{x_1} = \myvec{1 \\ 2},\vec{x_2} = \myvec{3 \\ 4} 
 \end{align}
 After applying linear operator \textbf{T} on it,
+
 \begin{align}
-\vec{x_1} = \myvec{3 \\ 4}, \vec{x_2} = \myvec{1 \\ 2}
-\end{align}
-After applying linear operator \textbf{U} on it,
-\begin{align}
-\vec{x_1} = \myvec{1 \\ 2}, \vec{x_2} = \myvec{0 \\ 0}
+\textbf{T}\brak{x_1, x_2} = \vec{A}\myvec{\vec{x_1} & \vec{x_2}}\\
+\implies   \vec{A}\myvec{\vec{x_1} & \vec{x_2}} =  \myvec{0 & 1 \\ 1 & 0 } \myvec{1 & 3 \\ 2 & 4} = \myvec{3 & 1 \\ 4 & 2}\\
+%\end{align}
+%\begin{align}
+ \implies \vec{x_1} = \myvec{3 \\ 4}, \vec{x_2} = \myvec{1 \\ 2}
 \end{align}
 
 \begin{figure}[htb!]	
@@ -183,9 +184,24 @@ After applying linear operator \textbf{U} on it,
 \end{figure}
 \begin{figure}[htb!]	
 	\centering	
-	\includegraphics[width=\columnwidth]{Projection.png}	
+	\includegraphics[width=\columnwidth]{Projection1.png}	
 	\caption{Projection of AB onto x-axis}
 	\label{fig2}	
 \end{figure}
+
+After applying linear operator \textbf{U} on it,
+\begin{align}
+\vec{x_1} = \myvec{1 \\ 2}, \vec{x_2} = \myvec{0 \\ 0}
+\end{align}
+
+
+\begin{align}
+\textbf{T}\brak{x_1, x_2} = \vec{A}\myvec{\vec{x_1} & \vec{x_2}}\\
+\implies   \vec{A}\myvec{\vec{x_1} & \vec{x_2}} =  \myvec{1 &  0\\ 0 & 0 } \myvec{1 & 3 \\ 2 & 4} = \myvec{1 & 3 \\ 0 & 0}\\
+%\end{align}
+%\begin{align}
+\implies \vec{x_1} = \myvec{1 \\ 0}, \vec{x_2} = \myvec{3 \\ 0}
+\end{align}
+
 
 \end{document}
