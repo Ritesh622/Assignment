@@ -172,11 +172,10 @@ Geometrically, \textbf{T} is a projection onto the x-axis.
 The matrix  $\vec{A}$ is representation  of the linear transformation \textbf{T} that is projection on x-axis.
 After applying linear operator \textbf{T} on it,
 
-\begin{align}
-\textbf{T} \vec{\alpha_1} = \vec{A}\vec{\alpha_1}= \myvec{1 & 0 \\ 0 & 0 }\myvec{1 \\ i}=\myvec{ 1  \\ 0} \label{2.1}\\
-\textbf{T} \vec{\alpha_2} =\vec{A}\vec{\alpha_2}=\myvec{1 & 0 \\ 0 & 0 }\myvec{-i \\ 2}= \myvec{ -i  \\ 0} \label{2.2}
-\end{align}
-Now, for finding the matrix of \textbf{T} in the ordered basis $\ss'$,we combine the \ref{1}, \ref{2.1} and \ref{2.2} and  use concept of row-reduction of  the augmented matrix:
+\begin{multline}
+\myvec{\textbf{T} \brak{\vec{\alpha_1}} & \textbf{T} \brak{\vec{\alpha_1}}}  = \vec{A}\myvec{\vec{\alpha_1} & \vec{\alpha_2}}\\= \myvec{1 & 0 \\ 0 & 0 }\myvec{1 & -i \\ i & 2}=\myvec{ 1 & -i \\ 0 & 0} \label{2.1}
+\end{multline}
+Now, for finding the matrix of \textbf{T} in the ordered basis $\ss'$,we combine the \ref{1} and \ref{2.1}  and  use concept of row-reduction of  the augmented matrix:
 \begin{align}
 \myvec{1&-i& 1 & -i \\ i& 2 & 0 & 0 } &\xleftrightarrow{R_2 = R_2 - iR_1}\myvec{1&-i&1 & -i  \\ 0 &1 & -i & -1}\\
 &\xleftrightarrow{R_1=R_1 +iR_2}\myvec{1 &0&2 & -2i\\0 &1 &-i &-1 \\ }
