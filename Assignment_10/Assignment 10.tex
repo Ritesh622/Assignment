@@ -160,12 +160,14 @@ the standard ordered basis for $\mathbb{C}$ and let $\ss' = \left \{  \vec{\alph
 \end{align}
 What is the matrix of \textbf{T} in the ordered basis $\ss'$
 \section{solution}
-
-
-Geometrically, \textbf{T} is a projection onto the x-axis. 
 \begin{align}
-\intertext{We have }\vec{\alpha_1} = \myvec{1 \\ i},\vec{\alpha_2} = \myvec{-i \\ 2} \label{1}
+\intertext{Let}
+ \ss = \myvec{1 & 0\\ 0 & 1}
+\intertext{We have }\vec{\alpha_1} = \myvec{1 \\ i},\vec{\alpha_2} = \myvec{-i \\ 2} \label{1}\\
+\intertext{So,}
+\ss' = \myvec{1 & -i\\ i &2}
 \end{align}
+Geometrically, \textbf{T} is a projection onto the x-axis. 
 \begin{align}
 \intertext{ For projection, let Consider Matrix A as} \vec{A} = \myvec{1 & 0 \\ 0 & 0 } 
 \end{align}
@@ -173,7 +175,7 @@ The matrix  $\vec{A}$ is representation  of the linear transformation \textbf{T}
 After applying linear operator \textbf{T} on it,
 
 \begin{multline}
-\myvec{\textbf{T} \brak{\vec{\alpha_1}} & \textbf{T} \brak{\vec{\alpha_1}}}  = \vec{A}\myvec{\vec{\alpha_1} & \vec{\alpha_2}}\\= \myvec{1 & 0 \\ 0 & 0 }\myvec{1 & -i \\ i & 2}=\myvec{ 1 & -i \\ 0 & 0} \label{2.1}
+\textbf{T}\vec{\ss'}  = \vec{A}\ss'= \myvec{1 & 0 \\ 0 & 0 }\myvec{1 & -i \\ i & 2}=\myvec{ 1 & -i \\ 0 & 0} \label{2.1}
 \end{multline}
 Now, for finding the matrix of \textbf{T} in the ordered basis $\ss'$,we combine the \ref{1} and \ref{2.1}  and  use concept of row-reduction of  the augmented matrix:
 \begin{align}
@@ -185,5 +187,8 @@ Hence, the matrix of \textbf{T} in the ordered basis $\ss'$ is
 \begin{align}
 \myvec{2 & 2i \\ -i & -1}
 \end{align}
-
+And this can also be represented using   $\ss$  and $\ss'$ 
+\begin{align}
+\textbf{T}\brak{\vec{\ss}}=\myvec{2&2i\\-i&-1}\vec{\ss^{'}}   
+\end{align}
 \end{document}
