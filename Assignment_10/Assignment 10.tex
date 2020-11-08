@@ -153,19 +153,19 @@ Let \textbf{T} be the linear operator on $\mathbb{C}$ defined by
 \begin{align}
  \textbf{T} \brak{x_1, x_2} = \brak{x_1, 0}. 
  \end{align}
-  Let $\ss$  be
-the standard ordered basis for $\mathbb{C}$ and let $\ss' = \left \{  \vec{\alpha_1}, \vec{\alpha_2} \right \} $ be the ordered basis defined by 
+  Let $\beta$  be
+the standard ordered basis for $\mathbb{C}$ and let $\beta' = \left \{  \vec{\alpha_1}, \vec{\alpha_2} \right \} $ be the ordered basis defined by 
 \begin{align}
 \vec{\alpha_1}  = \brak{1,i},  \vec{\alpha_2} = \brak{-i, 2}.
 \end{align}
-What is the matrix of \textbf{T} in the ordered basis $\ss'$
+What is the matrix of \textbf{T} in the ordered basis $\beta'$
 \section{solution}
 \begin{align}
 \intertext{Let}
- \ss = \myvec{1 & 0\\ 0 & 1}
+ \beta = \myvec{1 & 0\\ 0 & 1}
 \intertext{We have }\vec{\alpha_1} = \myvec{1 \\ i},\vec{\alpha_2} = \myvec{-i \\ 2} \label{1}\\
 \intertext{So,}
-\ss' = \myvec{1 & -i\\ i &2}
+\beta' = \myvec{1 & -i\\ i &2}
 \end{align}
 Geometrically, \textbf{T} is a projection onto the x-axis. 
 \begin{align}
@@ -175,20 +175,20 @@ The matrix  $\vec{A}$ is representation  of the linear transformation \textbf{T}
 After applying linear operator \textbf{T} on it,
 
 \begin{multline}
-\textbf{T}\vec{\ss'}  = \vec{A}\ss'= \myvec{1 & 0 \\ 0 & 0 }\myvec{1 & -i \\ i & 2}=\myvec{ 1 & -i \\ 0 & 0} \label{2.1}
+\textbf{T}\vec{\beta'}  = \vec{A}\beta'= \myvec{1 & 0 \\ 0 & 0 }\myvec{1 & -i \\ i & 2}=\myvec{ 1 & -i \\ 0 & 0} \label{2.1}
 \end{multline}
-Now, for finding the matrix of \textbf{T} in the ordered basis $\ss'$,we combine the \ref{1} and \ref{2.1}  and  use concept of row-reduction of  the augmented matrix:
+Now, for finding the matrix of \textbf{T} in the ordered basis $\beta'$,we combine the \ref{1} and \ref{2.1}  and  use concept of row-reduction of  the augmented matrix:
 \begin{align}
 \myvec{1&-i& 1 & -i \\ i& 2 & 0 & 0 } &\xleftrightarrow{R_2 = R_2 - iR_1}\myvec{1&-i&1 & -i  \\ 0 &1 & -i & -1}\\
 &\xleftrightarrow{R_1=R_1 +iR_2}\myvec{1 &0&2 & -2i\\0 &1 &-i &-1 \\ }
 \end{align}
 
-Hence, the matrix of \textbf{T} in the ordered basis $\ss'$ is
+Hence, the matrix of \textbf{T} in the ordered basis $\beta'$ is
 \begin{align}
 \myvec{2 & 2i \\ -i & -1}
 \end{align}
-And this can also be represented using   $\ss$  and $\ss'$ 
+And this can also be represented using   $\beta$  and $\beta'$ 
 \begin{align}
-\textbf{T}\brak{\vec{\ss}}=\myvec{2&2i\\-i&-1}\vec{\ss^{'}}   
+\textbf{T}\brak{\vec{\beta}}=\myvec{2&2i\\-i&-1}\vec{\beta^{'}}   
 \end{align}
 \end{document}
