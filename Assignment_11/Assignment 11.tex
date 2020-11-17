@@ -163,29 +163,36 @@ g = \textbf{T}^{t} f
 Then find $g(x_1, x_2)$
 
 \section{solution}
-
-We have,
+ The linear operator \textbf{T} can be represented as a matrix $\vec{A}$ as follows
+ \begin{align}
+\vec{A} = \myvec{0 & -1 \\ 1 & 0}\\
+\textbf{T}(x_1, x_2) = \vec{A}\myvec{x_1 \\ x_2}\\
+\implies \vec{A}\myvec{x_1 \\ x_2} = \myvec{0 & -1 \\ 1 & 0}\myvec{x_1 \\ x_2} = \myvec{-x_2 \\ x_1}
+\intertext{And \eqref{1.1} can be written as}
+f(x_1,x_2) = \myvec{a & b}\myvec{x_1 \\ x_2}
+ \end{align}
+Now, we have given,
 \begin{align}
 g = \textbf{T}^{t}f\\ 
-\implies g(x_1, x_2) = \textbf{T}^{t} f(x_1, x_2)\label{2.2}
+\implies g(x_1, x_2) = \textbf{T}^{t} f(x_1, x_2)\label{2.5}
 \end{align}
 We know that, if \textbf{V} and \textbf{W} be vector spaces over the field $\mathbb{F}$. For each linear transformation \textbf{T} from \textbf{V} into \textbf{W}, there is a unique linear transformation
 $\textbf{T}^{t}$ from $\textbf{W*}$ into $\textbf{V*}$ such that,
 
 \begin{align}
-(\textbf{T}^{t}g)(\alpha)  = g (\textbf{T}\alpha) \label{2.3}
+(\textbf{T}^{t}g)(\alpha)  = g (\textbf{T}\alpha) \label{2.7}
 \end{align}
 Where for every $g$ in $\textbf{W*}$ and $\alpha$ in \textbf{V}.\\
 
-Now using \eqref{2.3} in \eqref{2.2} we can write,
+Now using \eqref{2.7} in \eqref{2.5} we can write,
 \begin{align}
- \textbf{T}^{t} f(x_1, x_2) = f(\textbf{T}(x_1, x_2)) \label{2.4}\\
-\intertext{Using \eqref{1.2} in \eqref{2.4}}
-f(\textbf{T}(x_1, x_2)) = f(-x_2, x_1)
-\intertext{From \eqref{1.1}, we can write}
-f(-x_2, x_1) = -ax_2 + bx_1
-\intertext{Hence,}
- \textbf{T}^{t} f(x_1, x_2) = -ax_2 + bx_1
+ \textbf{T}^{t} f(x_1, x_2) = f(\textbf{T}(x_1, x_2)) \label{2.8}\\
+f(\textbf{T}(x_1, x_2)) = \myvec{a & b}\myvec{0 & -1 \\ 1 & 0}\myvec{x_1 \\x_2}\\
+\implies f(\textbf{T}(x_1, x_2)) = -ax_2 + bx_1 \label{2.10}
+\end{align}
+\begin{align}
+\intertext{Combining \eqref{2.5}, \eqref{2.8} and \eqref{2.10} we have}
+  g(x_1, x_2) = -ax_2 + bx_1 = \myvec{a & b}\myvec{-x_2 \\ x_1}
 \end{align}
 
 \end{document}
