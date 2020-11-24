@@ -153,19 +153,43 @@ If $a$ and $b$ are element of a filed $\mathbb{F}$ and $ a \neq 0$, show that th
  \begin{align}
  S = \left \{    1, ax+b, \brak{ax+b}^2, \brak{ax+b}^3,  \dots  \right \}
  \end{align}
- And let $\left \langle S \right \rangle$ be the subspace, that is spanned by $S$. We know that if any set which is forms  with  combination of two elements, and  if no two elements of $S$ have the same degree in $S$, then all elements in $S$ will be  independent set in $\mathbb{F}[x]$.\\ Since $1 \in S, ax+b \in S $, and hence $b.1 + \frac{a}{a}\brak{a +bx} \in \left \langle S \right \rangle $ , it follows $x \in \left \langle S \right \rangle$.\\\\ 
- Now to prove $x^2 \in \left \langle S \right \rangle$ let consider another element form   $S$ which is $\brak{ax+b}^2$.\\
- Subtracting , $1.a^2 +2.a.b.x$ from $\brak{ax+b}^2$
+ And let $\left \langle S \right \rangle$ be the subspace, that is spanned by $S$.
+ % We know that if any set which is forms  with  combination of two elements, and  if no two elements of $S$ have the same degree in $S$, then all elements in $S$ will be  independent set in $\mathbb{F}[x]$.\\
  \begin{align}
- \brak{ax+b}^2 - a^2 - 2.a.b.x = a^2.x^2 \label{2.2}
+ \intertext{Since}
+  1 \in S\\
+ \intertext{and}
+  ax+b \in S,\\
+  \implies  b.1 + \frac{a}{a}\brak{a +bx} \in \left \langle S \right \rangle \\
+  \intertext{and hence, it follows}
+   \implies x \in \left \langle S \right \rangle 
  \end{align}
- from \ref{2.2} we conclude that $ a^2.x^2 $ will also $\in \left \langle S \right \rangle $.
- Now, $\frac{1}{a^2} . a^2. x^2 \in S $. Thus $x^2 \in  \left \langle S \right \rangle $. Hence using this concept with higher degree we can prove that, $ x^n \in  \left \langle S \right \rangle$  $\forall$  $ n $.\\
+ Now to prove
+ \begin{align}
+  x^2 \in \left \langle S \right \rangle \\
+ \intertext{let consider another element form $S$ which is}
+    \brak{ax+b}^2
+\end{align}
+Subtracting $1.a^2 +2.a.b.x$ from $\brak{ax+b}^2$
+ \begin{align}
+ \implies \brak{ax+b}^2 - a^2 - 2.a.b.x = a^2.x^2 \label{2.2}\\
+ \implies a^2.x^2 \in \left \langle S \right \rangle\\
+ \implies   \frac{1}{a^2} . a^2. x^2 \in S.\\
+ \implies x^2 \in  \left \langle S \right \rangle .
+ \end{align}
+ Now, Thus  Hence using this concept with higher degree we can prove that,
+ \begin{align}
+   x^n \in  \left \langle S \right \rangle, \forall  n
+  \end{align}
 Consider,
  \begin{align}
  S' =   \left \{    1, x, x^2, x^3,  \dots  \right \} \label{2.3}
    \end{align}
- Hence we can say that, \eqref{2.3} span the space of all polynomials which form with $\brak{ax + b}^n$. Hence we conclude   that $S$ spans the space of all polynomials.
+ Hence we can say that, \eqref{2.3} span the space of all polynomials which form with the help of
+ \begin{align} 
+  \brak{ax + b}^n
+  \end{align}
+   Hence we conclude   that $S$ spans the space of all polynomials.
  
 
 
