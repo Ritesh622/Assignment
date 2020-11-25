@@ -8,6 +8,7 @@
 \usepackage{txfonts}
 \usepackage{stfloats}
 \usepackage{bm}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{cite}
 \usepackage{cases}
 \usepackage{subfig}
@@ -154,7 +155,6 @@ If $a$ and $b$ are element of a filed $\mathbb{F}$ and $ a \neq 0$, show that th
  S = \left \{    1, ax+b, \brak{ax+b}^2, \brak{ax+b}^3,  \dots  \right \}
  \end{align}
  And let $\left \langle S \right \rangle$ be the subspace, that is spanned by $S$.
- % We know that if any set which is forms  with  combination of two elements, and  if no two elements of $S$ have the same degree in $S$, then all elements in $S$ will be  independent set in $\mathbb{F}[x]$.\\
  \begin{align}
  \intertext{Since}
   1 \in S\\
@@ -189,8 +189,36 @@ Consider,
  \begin{align} 
   \brak{ax + b}^n
   \end{align}
-   Hence we conclude   that $S$ spans the space of all polynomials.
- 
+ \\  Hence we conclude   that $S$ spans the space of all polynomials.
+We can summarize our procedure step by step using table\ref{t1}
+
+\renewcommand{\thetable}{1}
+\begin{table}[htb!]
+	\caption{Step for the solution }
+\label{t1} 
+	\tiny
+	{
+	\begin{tabular}{|l|p{4cm}|p{3cm}|}
+		\hline
+		\centering
+		\textbf{Sr. No.} & \textbf{Description} & \textbf{ Mathematical  representation} \\ 
+				\hline
+					\centering 
+			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$   \\
+				\hline
+					2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Given element are $\in S $  \\
+				\hline
+					3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Given element are $\in S $  \\
+				\hline	
+					4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $  \\
+				\hline
+					5. & show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$    \\
+				\hline
+\end{tabular} 
+
+}
+\end{table}
+
 
 
 \end{document}
