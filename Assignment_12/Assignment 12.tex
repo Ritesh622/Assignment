@@ -163,7 +163,7 @@ If $a$ and $b$ are element of a filed $\mathbb{F}$ and $ a \neq 0$, show that th
   1 \in S\\
  \intertext{and}
   ax+b \in S,\\
-  \implies  b.1 + \frac{a}{a}\brak{a +bx} \in \left \langle S \right \rangle \\
+  \implies  b.1 + \frac{1}{a}\brak{b +ax} \in \left \langle S \right \rangle \\
   \intertext{and hence, it follows}
    \implies x \in \left \langle S \right \rangle 
  \end{align}
@@ -238,13 +238,13 @@ We can summarize our procedure step by step using table\ref{t1}.
 
 
 
-
+\begin{multicols}{3}
 \begin{table*}[htb!]%\vspace{10pt}
 	\centering	 
 	\begin{scriptsize}
 		\caption{Step for the solution}
 		\label{t1}	 
-		\begin{tabular}{|p{1cm}|p{4cm}|p{3cm}|}
+		\begin{tabular}{|p{1cm}|p{4cm}|p{4cm}|}
 			\hline
 			\centering
 			\textbf{\ \ Sr. No} &\textbf{Description} &  \textbf{ Mathematical  representation}  \\ 
@@ -254,26 +254,30 @@ We can summarize our procedure step by step using table\ref{t1}.
 			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$ \\
 			\hline 
 			\centering
-			2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Given element are $\in S $  \\
+			2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Since
+			$1 \in S$
+			and
+			$ax+b \in S,$
+			$\implies  b.1 + \frac{1}{a}\brak{b +ax} \in \left \langle S \right \rangle$ 
+			  $\implies x \in \left \langle S \right \rangle$  Given element are $\in S $  \\
 			\hline
 			\centering
-			3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Given element are $\in S $ \\
+			3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Since $\brak{ax+b}^2 \in S $   $ \implies \brak{ax+b}^2 - a^2 - 2.a.b.x = a^2.x^2 
+			\implies a^2.x^2 \in \left \langle S \right \rangle
+			\implies   \frac{1}{a^2} . a^2. x^2 \in S.
+			\implies x^2 \in  \left \langle S \right \rangle$
+			 Given element are $\in S $ \\
 			\hline
 			\centering
 			4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $ \\
 			\hline
 			\centering
 		5. & Show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$ \\
-			\hline
-		
-			
-		
-			
+			\hline	
 		\end{tabular}
 	\end{scriptsize}
 \end{table*}
-
-
+\end{multicols}
 
 
 
