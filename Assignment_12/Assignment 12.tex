@@ -36,11 +36,14 @@
 \usepackage{hhline}                                           %%
 \usepackage{ifthen}                                           %%
 %optionally (for landscape tables embedded in another document): %%
+\usepackage[]{caption}
 \usepackage{lscape}     
 \usepackage{multicol}
 \usepackage{chngcntr}
-%\usepackage{enumerate}
-
+\usepackage{enumerate}
+%\usepackage{placeins}
+%\usepackage{float}
+%\restylefloat{table}
 %\usepackage{wasysym}
 %\newcounter{MYtempeqncnt}
 \DeclareMathOperator*{\Res}{Res}
@@ -164,6 +167,7 @@ If $a$ and $b$ are element of a filed $\mathbb{F}$ and $ a \neq 0$, show that th
   \intertext{and hence, it follows}
    \implies x \in \left \langle S \right \rangle 
  \end{align}
+ 
  Now to prove
  \begin{align}
   x^2 \in \left \langle S \right \rangle \\
@@ -189,35 +193,93 @@ Consider,
  \begin{align} 
   \brak{ax + b}^n
   \end{align}
- \\  Hence we conclude   that $S$ spans the space of all polynomials.
-We can summarize our procedure step by step using table\ref{t1}
+   
+Hence we conclude   that $S$ spans the space of all polynomials.
+We can summarize our procedure step by step using table\ref{t1}.
 
 \renewcommand{\thetable}{1}
-\begin{table}[htb!]
-	\caption{Step for the solution }
-\label{t1} 
-	\tiny
-	{
-	\begin{tabular}{|l|p{4cm}|p{3cm}|}
-		\hline
-		\centering
-		\textbf{Sr. No.} & \textbf{Description} & \textbf{ Mathematical  representation} \\ 
-				\hline
-					\centering 
-			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$   \\
-				\hline
-					2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Given element are $\in S $  \\
-				\hline
-					3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Given element are $\in S $  \\
-				\hline	
-					4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $  \\
-				\hline
-					5. & show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$    \\
-				\hline
-\end{tabular} 
+%\begin{longtable*} 
+%	\tiny
+%	{
+%	\caption{Step for the solution}
+%			\label{t1}
+%	\begin{tabular}{|p{1cm}|p{4cm}|p{3cm}|}	
+%			\hline
+%				\centering
+%			\textbf{Sr. No.} & \textbf{Description} & \textbf{ Mathematical  representation} \\ 
+%			\hline
+%			\centering 
+%			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$   \\
+%			\hline
+%			\centering
+%			2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Given element are $\in S $  \\
+%			\hline
+%			\centering
+%			3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Given element are $\in S $  \\
+%			\hline	
+%			\centering
+%			4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $  \\
+%			\hline
+%			\centering
+%			5. & show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$    \\
+%			\hline
+%		\end{tabular} 
+%	}
+%\end{longtable*}
+%
 
-}
-\end{table}
+
+
+
+
+
+
+
+
+
+
+
+\begin{table*}[htb!]%\vspace{10pt}
+	\centering	 
+	\begin{scriptsize}
+		\caption{Step for the solution}
+		\label{t1}	 
+		\begin{tabular}{|p{1cm}|p{4cm}|p{3cm}|}
+			\hline
+			\centering
+			\textbf{\ \ Sr. No} &\textbf{Description} &  \textbf{ Mathematical  representation}  \\ 
+			
+			\hline
+			\centering
+			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$ \\
+			\hline 
+			\centering
+			2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Given element are $\in S $  \\
+			\hline
+			\centering
+			3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Given element are $\in S $ \\
+			\hline
+			\centering
+			4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $ \\
+			\hline
+			\centering
+		5. & Show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$ \\
+			\hline
+		
+			
+		
+			
+		\end{tabular}
+	\end{scriptsize}
+\end{table*}
+
+
+
+
+
+
+
+
 
 
 
