@@ -237,47 +237,81 @@ We can summarize our procedure step by step using table\ref{t1}.
 
 
 
+%
+%\onecolumn
+%\begin{longtable}[htb!]
+%	%	\caption{Step for the solution}
+%		\label{t1}	 
+%		\begin{tabular}{|c|c|c|}
+%			\hline
+%			\centering
+%			\textbf{\ \ Sr. No} &\textbf{Description} &  \textbf{ Mathematical  representation}  \\ 
+%			
+%			\hline
+%			\centering
+%			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$ \\
+%			\hline 
+%			\centering
+%			2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Since
+%			$1 \in S$
+%			and
+%			$ax+b \in S,$
+%			$\implies  b.1 + \frac{1}{a}\brak{b +ax} \in \left \langle S \right \rangle$ 
+%			  $\implies x \in \left \langle S \right \rangle$  Given element are $\in S $  \\
+%			\hline
+%			\centering
+%			3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Since $\brak{ax+b}^2 \in S $   $ \implies \brak{ax+b}^2 - a^2 - 2.a.b.x = a^2.x^2 
+%			\implies a^2.x^2 \in \left \langle S \right \rangle
+%			\implies   \frac{1}{a^2} . a^2. x^2 \in S.
+%			\implies x^2 \in  \left \langle S \right \rangle$
+%			 Given element are $\in S $ \\
+%			\hline
+%			\centering
+%			4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $ \\
+%			\hline
+%			\centering
+%		5. & Show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$ \\
+%			\hline	
+%				\end{tabular}
+%                      \end{longtable}
 
-\begin{multicols}{3}
-\begin{table*}[htb!]%\vspace{10pt}
-	\centering	 
-	\begin{scriptsize}
-		\caption{Step for the solution}
-		\label{t1}	 
-		\begin{tabular}{|p{1cm}|p{4cm}|p{4cm}|}
-			\hline
+\onecolumn
+\begin{longtable}{|p{2cm}|p{5cm}|p{6cm}|}
+	
+\caption{Step of solution for given problem}
+\label{t1}
+\endfirsthead
+\endhead
+	   \hline
+       \centering
+		\textbf{ Sr. No} &\textbf{Description} &  \textbf{ Mathematical  representation}  \\ 
+		\hline
 			\centering
-			\textbf{\ \ Sr. No} &\textbf{Description} &  \textbf{ Mathematical  representation}  \\ 
-			
-			\hline
-			\centering
-			1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$ \\
-			\hline 
-			\centering
-			2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Since
-			$1 \in S$
-			and
-			$ax+b \in S,$
-			$\implies  b.1 + \frac{1}{a}\brak{b +ax} \in \left \langle S \right \rangle$ 
-			  $\implies x \in \left \langle S \right \rangle$  Given element are $\in S $  \\
-			\hline
-			\centering
-			3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Since $\brak{ax+b}^2 \in S $   $ \implies \brak{ax+b}^2 - a^2 - 2.a.b.x = a^2.x^2 
-			\implies a^2.x^2 \in \left \langle S \right \rangle
-			\implies   \frac{1}{a^2} . a^2. x^2 \in S.
-			\implies x^2 \in  \left \langle S \right \rangle$
-			 Given element are $\in S $ \\
-			\hline
-			\centering
-			4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $ \\
-			\hline
-			\centering
-		5. & Show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$ \\
-			\hline	
-		\end{tabular}
-	\end{scriptsize}
-\end{table*}
-\end{multicols}
+					1. & Consider  a set $S$ & $S = \left \{    1, ax+b, \dots  \right \}$ \\
+					\hline 
+					\centering
+					2. & Provide a proof that subset $S$ span the subspace $\left \langle S \right \rangle$  & Since
+					$1 \in S$
+					and
+					$ax+b \in S,$ \newline
+					$\implies  b.1 + \frac{1}{a}\brak{b +ax} \in \left \langle S \right \rangle$  \newline
+					  $\implies x \in \left \langle S \right \rangle$  Given element are $\in S $  \\
+					\hline
+					\centering
+					3. & Repeat  step 2 for the higher degree of polynomial also lie in the subspace and the also lie in the subset $S$. & Since $\brak{ax+b}^2 \in S $  \newline $ \implies \brak{ax+b}^2 - a^2 - 2.a.b.x  = a^2.x^2 \newline 
+					\implies a^2.x^2 \in \left \langle S \right \rangle \newline
+					\implies   \frac{1}{a^2} . a^2. x^2 \in S.\newline
+					\implies x^2 \in  \left \langle S \right \rangle$
+					 Given element are $\in S $ \\
+					\hline
+					\centering
+					4. &After providing proof for all element $\in S$ find the basis  . & $ S'=\left \{    1, x, x^2, x^3,  \dots  \right \} $ \\
+					\hline
+					\centering
+				5. & Show the element $\in S'$ are  able to form all element $S$ over $\mathbb{F}$ . & Hence $S$ form basis of $\mathbb{F}$ \\
+	      		\hline			      			      		
+\end{longtable}
+
 
 
 
