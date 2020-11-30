@@ -224,6 +224,21 @@ Where D  represents dimension of matrix. Therefore the dimension of the space of
 Let suppose we have matrix $A$ as :
 \begin{align}  
 A =  \begin{bmatrix}
+c_1I & \huge{0} \\
+\huge{0} & c_2I     
+\end{bmatrix}
+\intertext{Where,}   
+c_1I = \begin{bmatrix}
+1 & 0 \\
+0& 1     
+\end{bmatrix},
+c_2I = \begin{bmatrix}
+2 & 0 \\
+0 & 2     
+\end{bmatrix}
+\end{align}
+\begin{align}  
+\implies A =  \begin{bmatrix}
 1 & 0  & 0 & 0 \\ 
 0 & 1  & 0 & 0  \\
 0 & 0  & 2 & 0  \\
@@ -314,8 +329,8 @@ b_{21} & b_{22}  & 0       & 0  \\
 0      & 0       & 2b_{43} & 2b_{44}    
 \end{bmatrix}\\
 \implies B =  \begin{bmatrix}
-B_{11} & \huge{0} \\ 
-\huge{0}  & B_{22}  
+c_1B_{11} & \huge{0} \\ 
+\huge{0}  & c_2B_{22}  
 \end{bmatrix}\\
 \implies B_{ij} = 0, \forall i \neq j
 \end{align}
