@@ -217,4 +217,167 @@ Where D  represents dimension of matrix. Therefore the dimension of the space of
 \begin{align}
 {d_1}^2 + {d_2}^2 \dots + {d_k}^2
 \end{align}
+
+
+\section{Example}
+
+Let suppose we have matrix $A$ as :
+\begin{align}  
+A =  \begin{bmatrix}
+1 & 0  & 0 & 0 \\ 
+0 & 1  & 0 & 0  \\
+0 & 0  & 2 & 0  \\
+0 & 0  & 0 & 2    
+\end{bmatrix}
+\end{align}
+
+and $B$ as :
+\begin{align}  
+B =  \begin{bmatrix}
+B_{11} & B_{12}\\ 
+ B_{21}  & B_{22}  
+\end{bmatrix}\\
+\intertext{Where}
+B_{11} =  \begin{bmatrix}
+b_{11} & b_{12}\\ 
+b_{21}  & b_{22}  
+\end{bmatrix},
+B_{12} =  \begin{bmatrix}
+b_{13} & b_{14}\\ 
+b_{23}  & b_{24}  
+\end{bmatrix}\\ \\
+B_{21} =  \begin{bmatrix}
+b_{31} & b_{32}\\
+b_{41}  & b_{42}  
+\end{bmatrix},
+B_{22} =  \begin{bmatrix}
+b_{33} & b_{34}\\ 
+b_{43}  & b_{44}  
+\end{bmatrix}\\ \\
+ \implies B =  \begin{bmatrix}
+b_{11} & b_{12}  & b_{13} & b_{14} \\ 
+b_{21} & b_{22}  & b_{23} & b_{24}  \\
+b_{31} & b_{32}  & b_{33} & b_{34}  \\
+b_{41} & b_{42}  & b_{43} & b_{44}    
+\end{bmatrix}
+\intertext{Consider}
+C = AB\\
+\implies C = \begin{bmatrix}
+b_{11} & b_{12}  & b_{13} & b_{14} \\ 
+b_{21} & b_{22}  & b_{23} & b_{24}  \\
+2b_{31} & 2b_{32}  & 2b_{33} & 2b_{34}  \\
+2b_{41} & 2b_{42}  & 2b_{43} & 2b_{44}    
+\end{bmatrix}
+\intertext{Let another matrix D as :}
+D = BA\\
+B =  \begin{bmatrix}
+b_{11} & b_{12}  & 2b_{13} & 2b_{14} \\ 
+b_{21} & b_{22}  & 2b_{23} & 2b_{24}  \\
+b_{31} & b_{32}  & 2b_{33} & 2b_{34}  \\
+b_{41} & b_{42}  & 2b_{43} & 2b_{44}    
+\end{bmatrix}
+\end{align}
+We have given as,
+\begin{align}
+BA = AB\\
+\implies C = D
+\end{align}
+\begin{align}
+\intertext{it is possible only when}
+b_{13}= b_{14} = b_{23}= b_{24} = 0 \\
+\intertext{and}
+ b_{31} = b_{32} = b_{41} = b_{42} = 0
+ \end{align}
+ \begin{align}
+B_{12} =  \begin{bmatrix}
+b_{13} & b_{14}\\ 
+b_{23}  & b_{24}  
+\end{bmatrix} =  \begin{bmatrix}
+0 & 0\\ 
+0  & 0  
+\end{bmatrix}\\ 
+\intertext{And}
+B_{21} =  \begin{bmatrix}
+b_{31} & b_{32}\\
+b_{41}  & b_{42}  
+\end{bmatrix}  =  \begin{bmatrix}
+0 & 0\\ 
+0  & 0  
+\end{bmatrix} 
+\end{align}
+Hence, therefore matrix $B$ becomes,
+\begin{align}
+B =  \begin{bmatrix}
+b_{11} & b_{12}  & 0       & 0 \\ 
+b_{21} & b_{22}  & 0       & 0  \\
+0      & 0       & 2b_{33} & 2b_{34}  \\
+0      & 0       & 2b_{43} & 2b_{44}    
+\end{bmatrix}\\
+\implies B =  \begin{bmatrix}
+B_{11} & \huge{0} \\ 
+\huge{0}  & B_{22}  
+\end{bmatrix}\\
+\implies B_{ij} = 0, \forall i \neq j
+\end{align}
+
+Now the basis of the $n \times n $  matrices for vector space of all nxn matrix B are,
+\begin{align}
+\beta_1 =  \begin{bmatrix}
+1 & 0  & 0 & 0 \\ 
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0    
+\end{bmatrix},
+ \beta_2 =  \begin{bmatrix}
+0 & 1  & 0 & 0 \\ 
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0    
+\end{bmatrix}\\
+\beta_3 =  \begin{bmatrix}
+0 & 0  & 0 & 0 \\ 
+1 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0    
+\end{bmatrix},
+\beta_4 =  \begin{bmatrix}
+0 & 0  & 0 & 0 \\ 
+0 & 1  & 0 & 0  \\
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0    
+\end{bmatrix}\\
+\beta_5 =  \begin{bmatrix}
+0 & 0  & 0 & 0 \\ 
+0 & 0  & 0 & 0  \\
+0 & 0  & 1 & 0  \\
+0 & 0  & 0 & 0    
+\end{bmatrix},
+\beta_6 =  \begin{bmatrix}
+0 & 0  & 0 & 0 \\ 
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 1  \\
+0 & 0  & 0 & 0    
+\end{bmatrix}\\
+\beta_7 =  \begin{bmatrix}
+1 & 0  & 0 & 0 \\ 
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0  \\
+0 & 0  & 1 & 0    
+\end{bmatrix},
+\beta_8 =  \begin{bmatrix}
+0 & 0  & 0 & 0 \\ 
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 0  \\
+0 & 0  & 0 & 1    
+\end{bmatrix},
+\end{align}
+Thus, Dimension of $\mathbf{V}$ $($vector space of all $n \times n$ matrices $ B ) = 8$
+\begin{align}
+\intertext{Also}
+ {d_1}^{2} + d{_2}^2 = 2^{2}+2^{2} = 8. 
+ \end{align}
+Therefore, Dimension of $\mathbf{V}$ $($vector space of all $ n \times n$ matrix $B$ is :
+\begin{align}
+ d_1^2+d_2^2
+ \end{align}
 \end{document}
