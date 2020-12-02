@@ -190,13 +190,13 @@
 	\end{align} 
 	In matrix form we can write it as:
 	\begin{align}
-	\left[ \vec{I +E}\right]_{\ss} =  \myvec{\vec{2I_1} & \vec{0}\\ \vec{0} & \vec{I_2}} \label{2.16}
+	\left[ \vec{I +E}\right]_{\ss} =  \myvec{2\vec{I_1} & \vec{0}\\ \vec{0} & \vec{I_2}} \label{2.16}
 	\end{align}
 	Where, $\vec{I_{1}}$ is $k \times k$ and $\vec{I_{2}}$ is $({n-k}) \times ({n - k})$ identity matrices, and each $\vec{0}$ represents the zero matrix of
 	appropriate dimension.\\
 	From \refeq{2.16} we can calculate the determinant as:
 	\begin{align}
-	det\myvec{\vec{I} + \vec{E}} = 2^k \neq  0
+	\text{det}\myvec{\vec{I} + \vec{E}} = 2^k \neq  0
 	\end{align}
 	Hence Matrix $\myvec{\vec{I}+ \vec{E}}$ is invertible.\\
 	Since $\left[ \vec{I} + \vec{E}\right]_{\ss}$ is combination of identity matrices. Hence, from \eqref{2.16}, inverse of the matrix  $\left[ \vec{I} + \vec{E}\right]_{\ss}$ is given as :
@@ -218,4 +218,66 @@
 	\begin{align}
 	\vec{I} - \frac{1}{2}\vec{E} +\vec{E} + \frac{1}{2}\vec{E} = \vec{I}
 	\end{align}
+	
+	\section{example}
+	Let consider a matrix $\vec{E}$ as :
+	\begin{align}
+	\vec{E} =  \myvec{1 & 0 \\ 0 & 0}\\
+	\implies \vec{E}^2 = \myvec{1 & 0 \\ 0 & 0}\myvec{1 & 0 \\ 0 & 0} = \myvec{1 & 0 \\ 0 & 0}\\
+\implies \vec{E}^2 = E.\\
+\intertext{Basis for this matix is}
+\beta_1 = \myvec{1 \\ 0 } \text{and}, \beta_2 = \myvec{0 \\0}\\
+\intertext{We have,} 
+\vec{E}\beta_1 =\myvec{1 & 0 \\ 0 & 0} \myvec{1 \\ 0} = \myvec{1 \\ 0 } = \beta_1\\
+\intertext{And,}
+\vec{E}\beta_2 = \myvec{1 & 0 \\ 0 & 0}\myvec{0 \\ 0 }  =  \myvec{0 \\ 0}= \beta_2
+\end{align}
+\begin{align}
+\intertext{Now,}
+\vec{I}+ \vec{E} = \myvec{1 & 0 \\ 0 & 1} + \myvec{ 1 & 0 \\ 0 & 0}\\
+\implies \vec{I} + \vec{E} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 & 0 \\ 0 &1}\\
+\implies \myvec{\vec{I} + \vec{E}} \beta_1 = \myvec{2 & 0 \\ 0 &1}\myvec{1 \\ 0} =  \myvec{2 \\ 0}\\
+\implies \myvec{\vec{I} + \vec{E}} \beta_1 = 2 \myvec{1 \\ 0} = 2\beta_1\\
+\intertext{Similarly,}
+\implies \myvec{\vec{I} + \vec{E}} \beta_2 = \myvec{2 & 0 \\ 0 &1}\myvec{0 \\ 0} =  \myvec{0 \\ 0}\\
+\implies \myvec{\vec{I} + \vec{E}} \beta_1 = 2 \myvec{0 \\ 0} = \beta_2\\
+\implies \left[ \vec{I} + \vec{E}\right]_{\ss} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 \vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_1}}
+\end{align}	
+Here we have $k = 1$ and $ n = 2 $ and, $(n - k) = 1$. Hence size of  $\vec{I_1}$ and $\vec{I_2}$  are $ 1 \times 1$. Similarly, size of zero matrix is also $1 \times 1$.
+Now determinant of $\vec{I} + \vec{E} $ is :
+\begin{align}
+\text{det}\myvec{\vec{I} + \vec{E}} = 2^k=  2 ^1 = 2 \neq 0.
+\end{align}
+Inverse of the matrix is :
+\begin{align}
+  \myvec{ \left[ \vec{I} + \vec{E}\right]}_{\ss}^{-1} = \myvec{\frac{1}{2} & 0 \\ 0 & 1}\\
+\implies \myvec{\frac{1}{2} & 0 \\ 0 & 1}  =\myvec{1 & 0 \\ 0 & 1} +  \myvec{ -\frac{1}{2} & 0 \\ 0 & 1} \label{3.16}
+\end{align}
+\begin{align}
+\intertext{Hence, equation \eqref{3.16} can be written as:}
+   \myvec{ \left[ \vec{I} + \vec{E}\right]}_{\ss}^{-1}  = \myvec{\vec{I_1} & \vec{0} \\
+	\vec{0} & \vec{I_2} } +  \myvec{-\frac{1}{2}\vec{I_1} & \vec{0} \\
+	\vec{0} & \vec{I_2}} = \vec{I} - \frac{1}{2}\left[\vec{E}\right]_{\ss}
+\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
 \end{document}
