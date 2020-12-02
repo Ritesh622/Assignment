@@ -198,7 +198,7 @@
 	\begin{align}
 	\text{det}\myvec{\vec{I} + \vec{E}} = 2^k \neq  0
 	\end{align}
-	Hence Matrix $\myvec{\vec{I}+ \vec{E}}$ is invertible.\\
+	From \ref{2.16} we can observe that, eigen values of  $ \left[\vec{I}+ \vec{E} \right] $ are k$^{th}$ number of 2 and $(n-k)^{th}$ number of 1. hence  none of the eigen value  of the matrix is zero. hence it is invertible. \\
 	Since $\left[ \vec{I} + \vec{E}\right]_{\ss}$ is combination of identity matrices. Hence, from \eqref{2.16}, inverse of the matrix  $\left[ \vec{I} + \vec{E}\right]_{\ss}$ is given as :
 	\begin{multline}
 	\myvec{\left[ \vec{I} + \vec{E}\right]_{\ss} }^{-1} = \myvec{\frac{1}{2}\vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_2} }\\
@@ -241,10 +241,16 @@
 \intertext{Similarly,}
 \implies \myvec{\vec{I} + \vec{E}} \beta_2 = \myvec{2 & 0 \\ 0 &1}\myvec{0 \\ 0} =  \myvec{0 \\ 0}\\
 \implies \myvec{\vec{I} + \vec{E}} \beta_1 = 2 \myvec{0 \\ 0} = \beta_2\\
-\implies \left[ \vec{I} + \vec{E}\right]_{\ss} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 \vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_1}}
+\implies \left[ \vec{I} + \vec{E}\right]_{\ss} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 \vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_1}} \label{2.13}
 \end{align}	
+
+The eigen values of the matrix $\left[\vec{I} + \vec{E}\right]$ from \eqref{2.13} are  2 and 1. Since none of the eigen value is zero, hence matrix is invertible.
+
 Here we have $k = 1$ and $ n = 2 $ and, $(n - k) = 1$. Hence size of  $\vec{I_1}$ and $\vec{I_2}$  are $ 1 \times 1$. Similarly, size of zero matrix is also $1 \times 1$.
 Now determinant of $\vec{I} + \vec{E} $ is :
+
+
+
 \begin{align}
 \text{det}\myvec{\vec{I} + \vec{E}} = 2^k=  2 ^1 = 2 \neq 0.
 \end{align}
