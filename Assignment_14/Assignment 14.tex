@@ -164,37 +164,32 @@
 	Since $\vec{E}$ is an idempotent matrix, that is :
 	\begin{align}
 	\vec{E}^2 = \vec{E} \label{2.1}
-	\end{align}
-	\begin{align}
 	\intertext{Let,}
-	A = I + E\\ \label{2.18}
-	\implies E = A - I
+	\vec{A} = \vec{I} + \vec{E} \label{2.3}\\  
+	\implies \vec{E} = \vec{A} - \vec{I}\label{2.4}
 	\end{align}
 	\begin{align}
-	\implies E^2 = (A - I)(A - I)= A^2 - 2A +I^2\\
-	\intertext{(from  \ref{2.1} $E^2 = E$ ),}
-	\implies  E = A^2 -2A + I
+	\implies \vec{E}^2 = (\vec{A} - \vec{I})(\vec{A} - \vec{I})= \vec{A}^2 - 2\vec{A} +\vec{I}^2
 	\end{align}
 	\begin{align}
-	\intertext{Using \eqref{2.18} we have,}
-	\implies A - I =  A^2 -2A +I = A^2 -3A + 2I = 0
+	\intertext{From \ref{2.1},}
+	\implies  \vec{E} = \vec{A}^2 -2\vec{A} + \vec{I}
 	\end{align}
 	\begin{align}
-	\implies I = \frac{ 3A - A^2}{2}
+	\intertext{Using \eqref{2.4} we have,}
+	\implies \vec{A} - \vec{I} = \vec{A}^2 -2\vec{A} +\vec{I} = \vec{A}^2 -3\vec{A} + 2\vec{I} = 0
 	\end{align}
-	multiplying $A^{-1}$ both side,
 	\begin{align}
-	A^{-1} = \frac{3I-A}{2} = \frac{3I - (I +E)}{2}\\
-	A^{-1} = \frac{2I - E}{2}
-	\intertext{Using \eqref{2.18}, we  have,}
-	(I + E)^{-1} =  I- \frac{E}{2} 
+	\implies \vec{I} = \frac{ 3\vec{A} - \vec{A}^2}{2}
 	\end{align}
-	
-	
-	Hence,
+	multiplying $\vec{A}^{-1}$ both side,
 	\begin{align}
-	\myvec{\vec{I} + \vec{E}}^{-1} =\vec{I} - \frac{1}{2}\vec{E} \label{2.27}
+	\vec{A}^{-1} = \frac{3\vec{I}-\vec{A}}{2} = \frac{3\vec{I} - (\vec{I} +\vec{E})}{2}\\
+\implies \vec{A^{-1}} = \frac{2\vec{I}- \vec{E}}{2}\\
+	\intertext{Using \eqref{2.3}, we  have,}
+(\vec{I} + \vec{E})^{-1} =  \vec{I}- \frac{1}{2}\vec{E} \label{2.11}
 	\end{align}
+
 	
 	\section{example}
 	Let consider a matrix $\vec{E}$ as :
@@ -202,8 +197,6 @@
 	\vec{E} =  \myvec{1 & 0 \\ 0 & 0}\\
 	\implies \vec{E}^2 = \myvec{1 & 0 \\ 0 & 0}\myvec{1 & 0 \\ 0 & 0} = \myvec{1 & 0 \\ 0 & 0}\\
 \implies \vec{E}^2 = E.\\
-\end{align}
-\begin{align}
 \intertext{Now,}
 \vec{I}+ \vec{E} = \myvec{1 & 0 \\ 0 & 1} + \myvec{ 1 & 0 \\ 0 & 0}\\
 \implies \vec{I} + \vec{E} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 & 0 \\ 0 &1} \label{3.8}\\
@@ -216,15 +209,9 @@ Now let find the eigen value of matrix $\myvec{\vec{I} + \vec{E}}$ :
 \end{align}
  
 The eigen values of the matrix $(\vec{I} + \vec{E})$ from \eqref{3.16} are  2 and 1. Since none of the eigen value is zero, hence matrix is invertible.\\
-Inverse of the matrix  from \eqref{2.27} is :
+Inverse of the matrix  from \eqref{2.11} is :
 \begin{align}
   \myvec{\vec{I} + \vec{E}}^{-1} =\myvec{1 & 0 \\ 0 & 1} +  \myvec{ -\frac{1}{2} & 0 \\ 0 & 1} \label{3.19}
 \end{align}
-%\begin{align}
-%\intertext{Hence, equation \eqref{3.19} can be written as:}
-%   \myvec{\vec{I} + \vec{E}}^{-1}  = \myvec{\vec{I_1} & \vec{0} \\
-%	\vec{0} & \vec{I_2}} +  \myvec{-\frac{1}{2}\vec{I_1} & \vec{0} \\
-%	\vec{0} & \vec{I_2}} = \vec{I} - \frac{1}{2}\vec{E}
-%\end{align}
 	
 \end{document}
