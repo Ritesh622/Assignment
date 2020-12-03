@@ -190,7 +190,7 @@
 	\end{align} 
 	In matrix form we can write it as:
 	\begin{align}
-	\left[ \vec{I +E}\right]_{\ss} =  \myvec{2\vec{I_1} & \vec{0}\\ \vec{0} & \vec{I_2}} \label{2.16}
+	\myvec{\vec{I} +\vec{E}}=  \myvec{2\vec{I_1} & \vec{0}\\ \vec{0} & \vec{I_2}} \label{2.16}
 	\end{align}
 	Where, $\vec{I_{1}}$ is $k \times k$ and $\vec{I_{2}}$ is $({n-k}) \times ({n - k})$ identity matrices, and each $\vec{0}$ represents the zero matrix of
 	appropriate dimension.\\
@@ -198,26 +198,70 @@
 	\begin{align}
 	\text{det}\myvec{\vec{I} + \vec{E}} = 2^k \neq  0
 	\end{align}
-	From \ref{2.16} we can observe that, eigen values of  $ \left[\vec{I}+ \vec{E} \right] $ are k$^{th}$ number of 2 and $(n-k)^{th}$ number of 1. hence  none of the eigen value  of the matrix is zero. hence it is invertible. \\
-	Since $\left[ \vec{I} + \vec{E}\right]_{\ss}$ is combination of identity matrices. Hence, from \eqref{2.16}, inverse of the matrix  $\left[ \vec{I} + \vec{E}\right]_{\ss}$ is given as :
-	\begin{multline}
-	\myvec{\left[ \vec{I} + \vec{E}\right]_{\ss} }^{-1} = \myvec{\frac{1}{2}\vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_2} }\\
-	=   \myvec{\vec{I_1} & \vec{0} \\
-		\vec{0} & \vec{I_2} } +  \myvec{-\frac{1}{2}\vec{I_1} & \vec{0} \\
-		\vec{0} & \vec{I_2}} = \vec{I} - \frac{1}{2}\left[\vec{E}\right]_{\ss}
-	\end{multline}
+	From \ref{2.16} we can observe that, eigen values of  $ \myvec{\vec{I}+ \vec{E}} $ are k$^{th}$ number of 2 and $(n-k)^{th}$ number of 1. hence  none of the eigen value  of the matrix is zero. hence it is invertible. \\
+	Since $\myvec{ \vec{I} + \vec{E}}$ is combination of identity matrices. Hence, from \eqref{2.16}, inverse of the matrix  $\myvec{\vec{I} + \vec{E}}$ is given as :
+	
+	\begin{align}
+	\intertext{Let,}
+	A = I + E\\ \label{2.18}
+	\implies E = A - I
+	\end{align}
+	\begin{align}
+	\implies E^2 = (A - I)(A - I)= A^2 - 2A +I^2\\
+	\intertext{from  \ref{2.1} $E^2 = E)$,}
+	\implies  E = A^2 -2A + I
+	\end{align}
+	\begin{align}
+	\intertext{Using \eqref{2.18} we have,}
+	\implies A - I =  A^2 -2A +I = A^2 -3A + 2I = 0
+	\end{align}
+	\begin{align}
+	\implies I = \frac{ 3A - A^2}{2}
+	\end{align}
+	multiplying $A^{-1}$ both side,
+	\begin{align}
+	A^{-1} = \frac{3I-A}{2} = \frac{3I - (I +E)}{2}\\
+	A^{-1} = \frac{2I - E}{2}
+	\intertext{Using \eqref{2.18}, we  have,}
+	(I + E)^{-1} =  I-+ \frac{E}{2} 
+	\end{align}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+%	\begin{multline}
+%	\myvec{\left[ \vec{I} + \vec{E}\right]_{\ss} }^{-1} = \myvec{\frac{1}{2}\vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_2} }\\
+%	=   \myvec{\vec{I_1} & \vec{0} \\
+%		\vec{0} & \vec{I_2} } +  \myvec{-\frac{1}{2}\vec{I_1} & \vec{0} \\
+%		\vec{0} & \vec{I_2}} = \vec{I} - \frac{1}{2}\left[\vec{E}\right]_{\ss}
+%	\end{multline}
 	Hence,
 	\begin{align}
-	\myvec{\left[ \vec{I} + \vec{E}\right]_{\ss} }^{-1} = \vec{I} - \frac{1}{2}\left[\vec{E}\right]_{\ss}
+	\myvec{\vec{I} + \vec{E}_{\ss}}^{-1} =\vec{I} - \frac{1}{2}\vec{E} \label{2.27}
 	\end{align}
-	we can also verify our results as:
-	\begin{multline}
-	\myvec{\vec{I} + \vec{E}}\myvec{\vec{I} - \frac{1}{2}\vec{E}} = \vec{I}^2- \frac{1}{2}\vec{E} +\vec{E}- \frac{1}{2}\vec{E}^2 \label{2.20}
-	\end{multline}
-	From \eqref{2.1}, We have $\vec{E}^2 = \vec{E}$, Hence \eqref{2.20} becomes,
-	\begin{align}
-	\vec{I} - \frac{1}{2}\vec{E} +\vec{E} + \frac{1}{2}\vec{E} = \vec{I}
-	\end{align}
+%	we can also verify our results as:
+%	\begin{multline}
+%	\myvec{\vec{I} + \vec{E}}\myvec{\vec{I} - \frac{1}{2}\vec{E}} = \vec{I}^2- \frac{1}{2}\vec{E} +\vec{E}- \frac{1}{2}\vec{E}^2 \label{2.20}
+%	\end{multline}
+%	From \eqref{2.1}, We have $\vec{E}^2 = \vec{E}$, Hence \eqref{2.20} becomes,
+%	\begin{align}
+%	\vec{I} - \frac{1}{2}\vec{E} +\vec{E} + \frac{1}{2}\vec{E} = \vec{I}
+%	\end{align}
 	
 	\section{example}
 	Let consider a matrix $\vec{E}$ as :
@@ -231,8 +275,8 @@
 \vec{E}\beta_1 =\myvec{1 & 0 \\ 0 & 0} \myvec{1 \\ 0} = \myvec{1 \\ 0 } = \beta_1\\
 \intertext{And,}
 \vec{E}\beta_2 = \myvec{1 & 0 \\ 0 & 0}\myvec{0 \\ 0 }  =  \myvec{0 \\ 0}= \beta_2
-\end{align}
-\begin{align}
+%\end{align}
+%\begin{align}
 \intertext{Now,}
 \vec{I}+ \vec{E} = \myvec{1 & 0 \\ 0 & 1} + \myvec{ 1 & 0 \\ 0 & 0}\\
 \implies \vec{I} + \vec{E} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 & 0 \\ 0 &1} \label{3.8}\\
@@ -241,7 +285,7 @@
 \intertext{Similarly,}
 \implies \myvec{\vec{I} + \vec{E}} \beta_2 = \myvec{2 & 0 \\ 0 &1}\myvec{0 \\ 0} =  \myvec{0 \\ 0}\\
 \implies \myvec{\vec{I} + \vec{E}} \beta_1 = 2 \myvec{0 \\ 0} = \beta_2\\
-\implies \left[ \vec{I} + \vec{E}\right]_{\ss} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 \vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_1}} \label{2.13}
+\implies \vec{I} + \vec{E} = \myvec{2 & 0 \\ 0 & 1} = \myvec{2 \vec{I_1} & \vec{0} \\ \vec{0} & \vec{I_1}} \label{2.13}
 \end{align}	
 Now let find the eigen value of matrix $\myvec{\vec{I} + \vec{E}}$ :
 \begin{align}
@@ -252,44 +296,23 @@ Now let find the eigen value of matrix $\myvec{\vec{I} + \vec{E}}$ :
  
 The eigen values of the matrix $(\vec{I} + \vec{E})$ from \eqref{3.16} are  2 and 1. Since none of the eigen value is zero, hence matrix is invertible.
 
-Here we have $k = 1$ and $ n = 2 $ and, $(n - k) = 1$. Hence size of  $\vec{I_1}$ and $\vec{I_2}$  are $ 1 \times 1$. Similarly, size of zero matrix is also $1 \times 1$.
-Now determinant of $\vec{I} + \vec{E} $ is :
-
-
-
+%Here we have $k = 1$ and $ n = 2 $ and, $(n - k) = 1$. Hence size of  $\vec{I_1}$ and $\vec{I_2}$  are $ 1 \times 1$. Similarly, size of zero matrix is also $1 \times 1$.
+%Now determinant of $\vec{I} + \vec{E} $ is :
+%
+%
+%
+%\begin{align}
+%\text{det}\myvec{\vec{I} + \vec{E}} = 2^k=  2 ^1 = 2 \neq 0.
+%\end{align}
+Inverse of the matrix \eqref{2.27} is :
 \begin{align}
-\text{det}\myvec{\vec{I} + \vec{E}} = 2^k=  2 ^1 = 2 \neq 0.
+  \myvec{\vec{I} + \vec{E}}^{-1} =\myvec{1 & 0 \\ 0 & 1} +  \myvec{ -\frac{1}{2} & 0 \\ 0 & 1} \label{3.19}
 \end{align}
-Inverse of the matrix is :
-\begin{align}
-  \myvec{ \left[ \vec{I} + \vec{E}\right]}_{\ss}^{-1} = \myvec{\frac{1}{2} & 0 \\ 0 & 1}\\
-\implies \myvec{\frac{1}{2} & 0 \\ 0 & 1}  =\myvec{1 & 0 \\ 0 & 1} +  \myvec{ -\frac{1}{2} & 0 \\ 0 & 1} \label{3.19}
-\end{align}
-\begin{align}
-\intertext{Hence, equation \eqref{3.19} can be written as:}
-   \myvec{ \left[ \vec{I} + \vec{E}\right]}_{\ss}^{-1}  = \myvec{\vec{I_1} & \vec{0} \\
-	\vec{0} & \vec{I_2} } +  \myvec{-\frac{1}{2}\vec{I_1} & \vec{0} \\
-	\vec{0} & \vec{I_2}} = \vec{I} - \frac{1}{2}\left[\vec{E}\right]_{\ss}
-\end{align}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
+%\begin{align}
+%\intertext{Hence, equation \eqref{3.19} can be written as:}
+%   \myvec{\vec{I} + \vec{E}}^{-1}  = \myvec{\vec{I_1} & \vec{0} \\
+%	\vec{0} & \vec{I_2}} +  \myvec{-\frac{1}{2}\vec{I_1} & \vec{0} \\
+%	\vec{0} & \vec{I_2}} = \vec{I} - \frac{1}{2}\vec{E}
+%\end{align}
 	
 \end{document}
