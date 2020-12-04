@@ -165,17 +165,34 @@
 	Now we have 
 	\begin{align}
 	\mathbf{T}(B) = AB - BA\\
-	\implies  \mathbf{T}^2(B) = \mathbf{T}(\mathbf{T}(B)) =\mathbf{T}(AB -BA)	
+	\implies  \mathbf{T}^2(B) = \mathbf{T}(\mathbf{T}(B)) =\mathbf{T}(AB -BA)\label{2.3}	
 	\end{align}
 	\begin{multline}
 	\mathbf{T}(AB -BA) = A^2B - ABA - ABA + BA^2 \\= A^2 -2ABA + BA^2
 	\end{multline}
 	\begin{multline}
-	\implies\mathbf{T}^3(B) = \mathbf{T}(\mathbf{T}^2(B)) = A^3 - 3A^2BA + 3ABA^2 - BA^3 \label{2.5}
+	\implies\mathbf{T}^3(B) = \mathbf{T}(\mathbf{T}^2(B)) \\= A^3 - 3A^2BA + 3ABA^2 - BA^3 \label{2.5}
 	\end{multline}
 	Hence, from \eqref{2.5} we can say that, as we are increasing the power of operator $\mathbf{T}$, the power of $A$ is also increasing in every terms. Hence there exist   a value $P$  such that :
 	\begin{align}
 	\mathbf{T}^P (B)= \vec{0} 
 	\end{align} 
 	Hence, if $A$ is a nilpotent matrix then operator $\mathbf{T}$ is also a nilpotent operator.
+	\section{example}
+	Let consider a matrices $A$ and, $B$ as :
+	\begin{align}
+A = \myvec{2 & -2 \\ 2 & -2}, B = \myvec{1 & 2 \\ 3 & 4}\\
+A.B = \myvec{-4 & -4 \\ -4 & -4} \neq \vec{0}\\
+\intertext{Now,}
+\implies A^2 = \myvec{2 & -2 \\ 2 & -2}\myvec{2 & -2 \\ 2 & -2} =\myvec{0 & 0 \\ 0 & 0}\label{3.3}
+\intertext{Hence $K$ = 2.}
+\intertext{And we have also,}
+ABA = \myvec{-16 & 16 \\ -16 & 16} \neq \vec{0}
+\end{align}
+Hence from \eqref{2.3} we conclude, $P \neq 2$. 	Now putting the value of $A^2$ from \eqref{3.3} in \eqref{2.5} we get,
+\begin{align}
+\mathbf{T}^3(B) = \vec{0}
+\end{align}
+Hence, $P = 3$	for this example.
+	
 \end{document}
