@@ -153,45 +153,46 @@
 	\section{Problem}
 	Let $\mathbf{V}$ be the space of $ n \times n$  matrices over a field $\mathbb{F}$, and let $A$ be a fixed $n \times n $ matrix over field $\mathbb{F}$. Define a linear operator $\mathbf{T}$ on $\mathbf{V}$  by the equation 
 	\begin{align}
-	\mathbf{T}(B) = AB - BA
+	\mathbf{T}(\vec{B}) = \vec{A}\vec{B} - \vec{B}\vec{A}
 	\end{align}
-	Prove that if $A$  is a nilpotent matrix, then $\mathbf{T}$ is a nilpotent operator.
+	Prove that if $\vec{A}$  is a nilpotent matrix, then $\mathbf{T}$ is a nilpotent operator.
 	
 	\section{solution}
-	Since $A$ is a nilpotent  matrix, hence for a positive value $K$:
+	Since $\vec{A}$ is a nilpotent  matrix, hence for a positive value $K$:
 	\begin{align}
-	A^K = \vec{0}
+	\vec{A}^K = \vec{0}
 	\end{align} 
 	Now we have 
 	\begin{align}
-	\mathbf{T}(B) = AB - BA\\
-	\implies  \mathbf{T}^2(B) = \mathbf{T}(\mathbf{T}(B)) =\mathbf{T}(AB -BA)\label{2.3}	
+	\mathbf{T}(\vec{B}) = \vec{A}\vec{\vec{B}} - \vec{B}\vec{A}\\
+	\implies  \mathbf{T}^2(\vec{B}) = \mathbf{T}(\mathbf{T}(\vec{B})) =\mathbf{T}(\vec{A}\vec{B} -\vec{B}\vec{A})\label{2.3}	
 	\end{align}
 	\begin{multline}
-	\mathbf{T}(AB -BA) = A^2B - ABA - ABA + BA^2 \\= A^2 -2ABA + BA^2
+	\mathbf{T}(\vec{A}\vec{B} -\vec{B}\vec{A}) = \vec{A}^2\vec{B} - \vec{A}\vec{B}\vec{A} -\vec{A}\vec{B}\vec{A} + \vec{B}\vec{A}^2 \\= \vec{A}^2 -2\vec{A}\vec{B}\vec{A} +\vec{B}\vec{A}^2
 	\end{multline}
 	\begin{multline}
-	\implies\mathbf{T}^3(B) = \mathbf{T}(\mathbf{T}^2(B)) \\= A^3 - 3A^2BA + 3ABA^2 - BA^3 \label{2.5}
+	\implies\mathbf{T}^3(\vec{B}) = \mathbf{T}(\mathbf{T}^2(\vec{B})) \\= \vec{A}^3 - 3\vec{A}^2\vec{B}\vec{A} + 3\vec{A}\vec{B}\vec{A}^2 - \vec{B}\vec{A}^3 \label{2.5}
 	\end{multline}
-	Hence, from \eqref{2.5} we can say that, as we are increasing the power of operator $\mathbf{T}$, the power of $A$ is also increasing in every terms. Hence there exist   a value $P$  such that :
+	Hence, from \eqref{2.5} we can say that, as we are increasing the power of operator $\mathbf{T}$, the power of $\vec{A}$ is also increasing in every terms. Hence there exist   a value $P$  such that :
 	\begin{align}
-	\mathbf{T}^P (B)= \vec{0} 
+	\mathbf{T}^P (\vec{B})= \vec{0} 
 	\end{align} 
-	Hence, if $A$ is a nilpotent matrix then operator $\mathbf{T}$ is also a nilpotent operator.
+	Hence, if $\vec{A}$ is a nilpotent matrix then operator $\mathbf{T}$ is also a nilpotent operator.
 	\section{example}
-	Let consider a matrices $A$ and, $B$ as :
+	Let consider a matrices $\vec{A}$ and, $B$ as :
 	\begin{align}
-A = \myvec{2 & -2 \\ 2 & -2}, B = \myvec{1 & 2 \\ 3 & 4}\\
-A.B = \myvec{-4 & -4 \\ -4 & -4} \neq \vec{0}\\
+\vec{A} = \myvec{2 & -2 \\ 2 & -2}, \vec{B} = \myvec{1 & 2 \\ 3 & 4}\\
+\vec{A}.\vec{B} = \myvec{-4 & -4 \\ -4 & -4} \neq \vec{0}\\
 \intertext{Now,}
-\implies A^2 = \myvec{2 & -2 \\ 2 & -2}\myvec{2 & -2 \\ 2 & -2} =\myvec{0 & 0 \\ 0 & 0}\label{3.3}
+\implies \vec{A}^2 = \myvec{2 & -2 \\ 2 & -2}\myvec{2 & -2 \\ 2 & -2} =\myvec{0 & 0 \\ 0 & 0}\label{3.3}\\
+\implies\vec{A}^3 = \myvec{0 & 0 \\ 0 & 0} \label{3.4}
 \intertext{Hence $K$ = 2.}
 \intertext{And we have also,}
-ABA = \myvec{-16 & 16 \\ -16 & 16} \neq \vec{0}
+\vec{A}\vec{B}\vec{A} = \myvec{-16 & 16 \\ -16 & 16} \neq \vec{0}
 \end{align}
-Hence from \eqref{2.3} we conclude, $P \neq 2$. 	Now putting the value of $A^2$ from \eqref{3.3} in \eqref{2.5} we get,
+Hence from \eqref{2.3} we conclude, $P \neq 2$. 	Now putting the value of $\vec{A}^3$ from \eqref{3.4} and  value of $\vec{A}^2$ from \eqref{3.3} in \eqref{2.5} we get,
 \begin{align}
-\mathbf{T}^3(B) = \vec{0}
+\mathbf{T}^3(\vec{B}) = \vec{0}
 \end{align}
 Hence, $P = 3$	for this example.
 	
