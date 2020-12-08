@@ -1,14 +1,10 @@
 
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
-
 \usepackage{setspace}
 \usepackage{gensymb}
-
 \singlespacing
 \usepackage[cmex10]{amsmath}
-
 \usepackage{amsthm}
-
 \usepackage{mathrsfs}
 \usepackage{txfonts}
 \usepackage{stfloats}
@@ -21,7 +17,6 @@
 \usepackage{multirow}
 \usepackage{caption}
 %\usepackage[font=bf,labelfont=bf]{caption}
-
 \usepackage{enumitem}
 \usepackage{mathtools}
 \usepackage{steinmetz}
@@ -30,9 +25,7 @@
 \usepackage{verbatim}
 \usepackage{tfrupee}
 \usepackage[breaklinks=true]{hyperref}
-
 \usepackage{tkz-euclide}
-
 \usetikzlibrary{calc,math}
 \usepackage{listings}
     \usepackage{color}                                            %%
@@ -193,6 +186,22 @@ f(\lambda) = -{\lambda}^3+7{\lambda}^2 -16\lambda +12 = (\lambda - 2)^2 (\lambda
  \end{align}
  Using \eqref{2.4.1}, we found minimal polynomial of $\vec{A}$ is :
  \begin{align}
- M_{\vec{A}}(x) = (x-2)^2(x-3)
+ M_{\vec{A}}(x) = (x-2)^2(x-3) \label{2.4.2}
  \end{align}	
+ We can relate the minimal polynomial with the size of Jordan block.\\\\
+ 
+\textbf{Size of Jordan block $=$ degree of minimal polynomial with geometic multiplicity of the eigen values.}\\\\
+From \eqref{2.4.2} we can observe that, geometric multiplicity of eigen value 2 is 2. Hence size of Jordan block is 2. which is given as:
+\begin{align}
+\myvec{2 & 1 \\ 0 & 2 }
+\end{align}
+if geometric multiplicity of $\lambda = 2$ would be 3, then Jordan block would be:
+\begin{align}
+\myvec{2 & 1 & 0 \\ 0 & 2 & 1 \\ 0 & 0 &2}
+\end{align}
+In \eqref{2.4.2} geometric multiplicity of eigen value 2 is 2, and geometric multiplicity of eigen value 3 is one hence jardon block is:
+\begin{align}
+\myvec{2 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 0 & 3}
+\end{align}
+
 \end{document}
