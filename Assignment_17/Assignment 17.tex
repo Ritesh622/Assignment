@@ -133,52 +133,52 @@ https://github.com/Ritesh622/Assignment_EE5609/tree/master/Assignment_17
 	\section{Problem}
 Let $f : \mathbb{R}^n  \rightarrow \mathbb{R}^n $ be a continuous  function. such that
 \begin{align}
-\int_{\mathbb{R}^n} \left | f(x)dx \right | < \infty
+\int_{\mathbb{R}^n} \left | f(\vec{x})d\vec{x} \right | < \infty
 \end{align}
-Let $A$ be a real $n  \times n$ invertible matrix and  for $x,y \in \mathbb{R}^n$ . Let $ \langle x,y\rangle $ denotes the standard inner product in $\mathbb{R}^n$ then,
-$\int_{\mathbb{R}^n} f(Ax) e^{i \langle y,x\rangle} dx  = ?$ \\
+Let $A$ be a real $n  \times n$ invertible matrix and  for $x,y \in \mathbb{R}^n$ . Let $ \langle \vec{x},\vec{y} \rangle $ denotes the standard inner product in $\mathbb{R}^n$ then,
+$\int_{\mathbb{R}^n} f(\vec{A}\vec{x}) e^{i \langle \vec{y},\vec{x} \rangle} d\vec{x}  = ?$ \\
 
 
 
 \begin{enumerate}
-\item $\int_{\mathbb{R}^n} f(x) e^{i\langle (A^{-1})^{T}y,x \rangle} \frac{dx}{\left | \text{det} (A) \right |} $\\
-\item $\int_{\mathbb{R}^n} f(x) e^{i \langle A^{T}y,x \rangle } \frac{dx}{\left | \text{det} (A) \right |} $.\\
-\item$\int_{\mathbb{R}^n} f(x) e^{i \langle (A^{T})^{-1}y,x \rangle }dx $.\\
-\item $\int_{\mathbb{R}^n} f(x) e^{i \langle A^{-1}y,x \rangle} \frac{dx}{\left | \text{det} (A) \right |} $.\\
+\item $\int_{\mathbb{R}^n} f(\vec{x}) e^{i\langle (\vec{A}^{-1})^{T}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left | \text{det} (\vec{A}) \right |} $\\
+\item $\int_{\mathbb{R}^n} f(\vec{x}) e^{i \langle \vec{A}^{T}\vec{y},\vec{x} \rangle } \frac{d\vec{x}}{\left | \text{det} (\vec{A}) \right |} $.\\
+\item$\int_{\mathbb{R}^n} f(\vec{x}) e^{i \langle (\vec{A}^{T})^{-1}\vec{y},\vec{x} \rangle }d\vec{x} $.\\
+\item $\int_{\mathbb{R}^n} f(\vec{x}) e^{i \langle \vec{A}^{-1}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left | \text{det} (\vec{A}) \right |} $.\\
 \end{enumerate}
 	\section{solution}
 Let consider,
 \begin{align}
-Ax = t \label{2.1}\\
-\implies x = A^{-1}t \label{2.2}\\
-\implies dx = \frac{dx}{ \left | \text{det} (A) \right |} \label{2.3}
+\vec{A}\vec{x} = \vec{t} \label{2.1}\\
+\implies \vec{x} = \vec{A}^{-1}\vec{t} \label{2.2}\\
+\implies d\vec{x} = \frac{d\vec{t}}{ \left | \text{det} (\vec{A}) \right |} \label{2.3}
 \end{align}
 Using  \eqref{2.1} to \eqref{2.3}, We can write: 
 \begin{multline}
-\int_{\mathbb{R}^n} f(Ax) e^{i\langle y,x\rangle} dx  = \int_{\mathbb{R}^n} f(t) e^{i \langle y,(A^{-1}t)\rangle} \frac{dt}{\left| \text{det}(A) \right|} \label{2.5}
+\int_{\mathbb{R}^n} f(\vec{A}\vec{x}) e^{i\langle \vec{y},\vec{x}\rangle} d\vec{x}  = \int_{\mathbb{R}^n} f(\vec{t}) e^{i \langle \vec{y},(\vec{A}^{-1}\vec{t})\rangle} \frac{d\vec{t}}{\left| \text{det}(\vec{A}) \right|} \label{2.5}
 \end{multline}
 We know that,
 \begin{align}
-\langle x,y \rangle = x^Ty = y^Tx\\
-\implies \langle y, (A^{-1}t)\rangle = (y^TA^{-1}t) \label{2.7}\\
+\langle \vec{x},\vec{y} \rangle = \vec{x}^T\vec{y} = \vec{y}^T\vec{x}\\
+\implies \langle \vec{y}, (\vec{A}^{-1}\vec{t})\rangle = (\vec{y}^T\vec{A}^{-1}\vec{t}) \label{2.7}\\
 \intertext{And}
-\implies  \langle (A^{-1})^{T}y,t\rangle = ((A^{-1})^{T}y)^Tt
+\implies  \langle (\vec{A}^{-1})^{T}\vec{y},\vec{t}\rangle = ((\vec{A}^{-1})^{T}\vec{y})^T\vec{t}
 \end{align}
 \begin{multline}
-\implies   ((A^{-1})^Ty)^Tt = (y^T((A^{-1})^T)^Tt) = (y^TA^{-1}t) \label{2.9}
+\implies   ((\vec{A}^{-1})^T\vec{y})^T\vec{t} = (\vec{y}^T((\vec{A}^{-1})^T)^T\vec{t}) = (\vec{y}^T\vec{A}^{-1}\vec{t}) \label{2.9}
 \end{multline}
 Hence, from \eqref{2.7} and \eqref{2.9}
 
 \begin{align}
- \langle y, (A^{-1}t)\rangle  =  \langle(A^{-1})^{T}y,t\rangle    \label{2.10}
+ \langle \vec{y}, (\vec{A}^{-1}\vec{t})\rangle  =  \langle(\vec{A}^{-1})^{T}\vec{y},\vec{t} \rangle    \label{2.10}
 \end{align}
 Using \eqref{2.10} in \eqref{2.5} We can write,
 \begin{align}
-\implies \int_{\mathbb{R}^n} f(t) e^{i \langle (A^{-1})^{T}y,t\rangle} \frac{dt}{\left| \text{det}(A) \right|}
+\implies \int_{\mathbb{R}^n} f(\vec{t}) e^{i \langle (\vec{A}^{-1})^{T}\vec{y},\vec{t} \rangle} \frac{d\vec{t}}{\left| \text{det}(\vec{A}) \right|}
 \end{align}
-replacing variable  $t$ with $x$.
+replacing variable  $\vec{t}$ with $\vec{x}$.
 \begin{align}
-\implies \int_{\mathbb{R}^n} f(t) e^{i \langle (A^{-1})^{T}y,x\rangle} \frac{dx}{\left| \text{det}(A) \right|}
+\implies \int_{\mathbb{R}^n} f(\vec{t}) e^{i \langle (\vec{A}^{-1})^{T}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left| \text{det}(\vec{A}) \right|}
 \end{align}
 Hence option $1$ is correct.
 
