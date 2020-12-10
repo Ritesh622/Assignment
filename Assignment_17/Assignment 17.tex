@@ -1,0 +1,181 @@
+
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\numberwithin{table}{section}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{Matrix Theory Assignment 17}
+\author{Ritesh Kumar \\ EE20RESCH11005}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+All the codes for this document can be found at
+%
+\begin{lstlisting}
+https://github.com/Ritesh622/Assignment_EE5609/tree/master/Assignment_17
+\end{lstlisting}
+%
+	\section{Problem}
+Let $f : \mathbb{R}^n  \rightarrow \mathbb{R}^n $ be a continuous  function. such that
+\begin{align}
+\int_{\mathbb{R}^n} \left | f(x)dx \right | < \infty
+\end{align}
+Let $A$ be a real $n  \times n$ invertible matrix and  for $x,y \in \mathbb{R}^n$ . Let $<x,y>$ denotes the standard inner product in $\mathbb{R}^n$ then,
+$\int_{\mathbb{R}^n} f(Ax) e^{i<y,x>} dx  = ?$ \\
+
+
+
+\begin{enumerate}
+\item$\int_{\mathbb{R}^n} f(x) e^{i<(A^{-1})^{T}y,x>} \frac{dx}{\left | \text{det} (A) \right |} $\\
+\item $\int_{\mathbb{R}^n} f(x) e^{i<A^{T}y,x>} \frac{dx}{\left | \text{det} (A) \right |} $.\\
+\item$\int_{\mathbb{R}^n} f(x) e^{i<(A^{T})^{-1}y,x>}dx $.\\
+\item $\int_{\mathbb{R}^n} f(x) e^{i<A^{-1}y,x>} \frac{dx}{\left | \text{det} (A) \right |} $.\\
+\end{enumerate}
+	\section{solution}
+Let consider,
+\begin{align}
+Ax = t \label{2.1}\\
+\implies x = A^{-1}t \label{2.2}\\
+\implies dx = \frac{dx}{ \left | \text{det} (A) \right |} \label{2.3}
+\end{align}
+Using  \eqref{2.1} to \eqref{2.3}, We can write: 
+\begin{multline}
+\int_{\mathbb{R}^n} f(Ax) e^{i<y,x>} dx  = \int_{\mathbb{R}^n} f(t) e^{i<y,(A^{-1}t)>} \frac{dt}{\left| \text{det}(A) \right|} \label{2.5}
+\end{multline}
+We know that,
+\begin{align}
+<x,y > = x^Ty = y^Tx\\
+\implies <y, (A^{-1}t)> = (y^TA^{-1}t) \label{2.7}\\
+\intertext{And}
+\implies <(A^{-1})^{T}y,t> = ((A^{-1})^{T}y)^Tt
+\end{align}
+\begin{multline}
+\implies   ((A^{-1})^Ty)^Tt = (y^T((A^{-1})^T)^Tt) = (y^TA^{-1}t) \label{2.9}
+\end{multline}
+Hence, from \eqref{2.7} and \eqref{2.9}
+
+\begin{align}
+<y, (A^{-1}t)>   = <(A^{-1})^{T}y,t>    \label{2.10}
+\end{align}
+Using \eqref{2.10} in \eqref{2.5} We can write,
+\begin{align}
+\implies \int_{\mathbb{R}^n} f(t) e^{i<(A^{-1})^{T}y,t>} \frac{dt}{\left| \text{det}(A) \right|}
+\end{align}
+Hence option $1$ is correct.
+
+\end{document}
