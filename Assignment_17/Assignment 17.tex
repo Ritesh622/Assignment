@@ -135,16 +135,16 @@ Let $f : \mathbb{R}^n  \rightarrow \mathbb{R}^n $ be a continuous  function. suc
 \begin{align}
 \int_{\mathbb{R}^n} \left | f(x)dx \right | < \infty
 \end{align}
-Let $A$ be a real $n  \times n$ invertible matrix and  for $x,y \in \mathbb{R}^n$ . Let $<x,y>$ denotes the standard inner product in $\mathbb{R}^n$ then,
-$\int_{\mathbb{R}^n} f(Ax) e^{i<y,x>} dx  = ?$ \\
+Let $A$ be a real $n  \times n$ invertible matrix and  for $x,y \in \mathbb{R}^n$ . Let $ \langle x,y\rangle $ denotes the standard inner product in $\mathbb{R}^n$ then,
+$\int_{\mathbb{R}^n} f(Ax) e^{i \langle y,x\rangle} dx  = ?$ \\
 
 
 
 \begin{enumerate}
-\item$\int_{\mathbb{R}^n} f(x) e^{i<(A^{-1})^{T}y,x>} \frac{dx}{\left | \text{det} (A) \right |} $\\
-\item $\int_{\mathbb{R}^n} f(x) e^{i<A^{T}y,x>} \frac{dx}{\left | \text{det} (A) \right |} $.\\
-\item$\int_{\mathbb{R}^n} f(x) e^{i<(A^{T})^{-1}y,x>}dx $.\\
-\item $\int_{\mathbb{R}^n} f(x) e^{i<A^{-1}y,x>} \frac{dx}{\left | \text{det} (A) \right |} $.\\
+\item $\int_{\mathbb{R}^n} f(x) e^{i\langle (A^{-1})^{T}y,x \rangle} \frac{dx}{\left | \text{det} (A) \right |} $\\
+\item $\int_{\mathbb{R}^n} f(x) e^{i \langle A^{T}y,x \rangle } \frac{dx}{\left | \text{det} (A) \right |} $.\\
+\item$\int_{\mathbb{R}^n} f(x) e^{i \langle (A^{T})^{-1}y,x \rangle }dx $.\\
+\item $\int_{\mathbb{R}^n} f(x) e^{i \langle A^{-1}y,x \rangle} \frac{dx}{\left | \text{det} (A) \right |} $.\\
 \end{enumerate}
 	\section{solution}
 Let consider,
@@ -155,14 +155,14 @@ Ax = t \label{2.1}\\
 \end{align}
 Using  \eqref{2.1} to \eqref{2.3}, We can write: 
 \begin{multline}
-\int_{\mathbb{R}^n} f(Ax) e^{i<y,x>} dx  = \int_{\mathbb{R}^n} f(t) e^{i<y,(A^{-1}t)>} \frac{dt}{\left| \text{det}(A) \right|} \label{2.5}
+\int_{\mathbb{R}^n} f(Ax) e^{i\langle y,x\rangle} dx  = \int_{\mathbb{R}^n} f(t) e^{i \langle y,(A^{-1}t)\rangle} \frac{dt}{\left| \text{det}(A) \right|} \label{2.5}
 \end{multline}
 We know that,
 \begin{align}
-<x,y > = x^Ty = y^Tx\\
-\implies <y, (A^{-1}t)> = (y^TA^{-1}t) \label{2.7}\\
+\langle x,y \rangle = x^Ty = y^Tx\\
+\implies \langle y, (A^{-1}t)\rangle = (y^TA^{-1}t) \label{2.7}\\
 \intertext{And}
-\implies <(A^{-1})^{T}y,t> = ((A^{-1})^{T}y)^Tt
+\implies  \langle (A^{-1})^{T}y,t\rangle = ((A^{-1})^{T}y)^Tt
 \end{align}
 \begin{multline}
 \implies   ((A^{-1})^Ty)^Tt = (y^T((A^{-1})^T)^Tt) = (y^TA^{-1}t) \label{2.9}
@@ -170,15 +170,15 @@ We know that,
 Hence, from \eqref{2.7} and \eqref{2.9}
 
 \begin{align}
-<y, (A^{-1}t)>   = <(A^{-1})^{T}y,t>    \label{2.10}
+ \langle y, (A^{-1}t)\rangle  =  \langle(A^{-1})^{T}y,t\rangle    \label{2.10}
 \end{align}
 Using \eqref{2.10} in \eqref{2.5} We can write,
 \begin{align}
-\implies \int_{\mathbb{R}^n} f(t) e^{i<(A^{-1})^{T}y,t>} \frac{dt}{\left| \text{det}(A) \right|}
+\implies \int_{\mathbb{R}^n} f(t) e^{i \langle (A^{-1})^{T}y,t\rangle} \frac{dt}{\left| \text{det}(A) \right|}
 \end{align}
 replacing variable  $t$ with $x$.
 \begin{align}
-\implies \int_{\mathbb{R}^n} f(t) e^{i<(A^{-1})^{T}y,x>} \frac{dx}{\left| \text{det}(A) \right|}
+\implies \int_{\mathbb{R}^n} f(t) e^{i \langle (A^{-1})^{T}y,x\rangle} \frac{dx}{\left| \text{det}(A) \right|}
 \end{align}
 Hence option $1$ is correct.
 
