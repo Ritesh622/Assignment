@@ -178,8 +178,31 @@ Using \eqref{2.10} in \eqref{2.5} We can write,
 \end{align}
 replacing variable  $\vec{t}$ with $\vec{x}$.
 \begin{align}
-\implies \int_{\mathbb{R}^n} f(\vec{t}) e^{i \langle (\vec{A}^{-1})^{T}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left| \text{det}(\vec{A}) \right|}
+\implies \int_{\mathbb{R}^n} f(\vec{x}) e^{i \langle (\vec{A}^{-1})^{T}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left| \text{det}(\vec{A}) \right|}
 \end{align}
 Hence option $1$ is correct.
+\section{Example}
+Let consider a matrix $\vec{A}$ and $\vec{x}$ as :
+\begin{align}
+\vec{A} = \myvec{x & 2y \\ 3x  & 4y}, \vec{x} = \myvec{x \\y}\\
+\vec{A}\vec{x} = \vec{t}\\
+\implies \vec{x} = \vec{A}^{-1}\vec{t}\\
+\vec{A^{-1}} =\myvec{-\frac{2}{x} & \frac{1}{x} \\ \frac{3}{2y} & -\frac{1}{2y}}\\
+\vec{t} = \myvec{x^2 + 2y^2 \\ 3x^2 + 4y^2}\\
+\intertext{Let consider another matrix $\vec{y}$ as : }
+\vec{y} = \myvec{5x \\7y}
+\end{align}
+Now,
+\begin{multline}
+\langle \vec{y},(\vec{A^{-1}}\vec{t}) \rangle =\vec{y}^T(\vec{A}^{-1}\vec{t}) = \myvec{5x & 6y}\myvec{x \\ y}  = 5x^2 + 6y^2 \label{3.7}
+\end{multline}
+And,
+\begin{multline}
+\langle   (\vec{A}^{-1})^T\vec{y}, \vec{t} \rangle = ((\vec{A}^{-1})^T\vec{y})^T \vec{t} = \myvec{-1 & 2}\myvec{x^2 +2y^2 \\3x^2 +4y^2}\\ = 5x^2 + 6y^2 \label{3.8}
+\end{multline}
+Hence from \eqref{3.7} and \eqref{3.8} we can conclude,
+\begin{align}
+ \langle \vec{y},(\vec{A^{-1}}\vec{t}) \rangle = \langle (\vec{A}^{-1})^T\vec{y}, \vec{t} \rangle
+\end{align}
 
 \end{document}
