@@ -178,7 +178,7 @@ Using \eqref{2.10} in \eqref{2.5} We can write,
 \end{align}
 replacing variable  $\vec{t}$ with $\vec{x}$.
 \begin{align}
-\implies \int_{\mathbb{R}^n} f(\vec{x}) e^{i \langle (\vec{A}^{-1})^{T}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left| \text{det}(\vec{A}) \right|}
+\implies \int_{\mathbb{R}^n} f(\vec{x}) e^{i \langle (\vec{A}^{-1})^{T}\vec{y},\vec{x} \rangle} \frac{d\vec{x}}{\left| \text{det}(\vec{A}) \right|} \label{2.11}
 \end{align}
 Hence option $1$ is correct.
 \section{Example}
@@ -204,5 +204,14 @@ Hence from \eqref{3.7} and \eqref{3.8} we can conclude,
 \begin{align}
  \langle \vec{y},(\vec{A^{-1}}\vec{t}) \rangle = \langle (\vec{A}^{-1})^T\vec{y}, \vec{t} \rangle
 \end{align}
+ We have also, 
+ \begin{align}
+ d\vec{x} = \frac{d\vec{t}}{  \left | -2x_1x_2 \right|}
+ \end{align}
+ Hence our equation \eqref{2.11} become,
+ \begin{align}
+ \int_{\mathbb{R}^2} f(\vec{x}) e^{i(5x_1^2 + 6{x_2}^2)}\frac{d\vec{x}}{  \left | -2x_1x_2 \right|}
+ \end{align}
 
+ 
 \end{document}
