@@ -184,21 +184,21 @@ Hence option $1$ is correct.
 \section{Example}
 Let consider a matrix $\vec{A}$ and $\vec{x}$ as :
 \begin{align}
-\vec{A} = \myvec{x & 2y \\ 3x  & 4y}, \vec{x} = \myvec{x \\y}\\
+\vec{A} = \myvec{x_1 & 2x_2 \\ 3x_1  & 4x_2}, \vec{x} = \myvec{x_1 \\x_2}\\
 \vec{A}\vec{x} = \vec{t}\\
 \implies \vec{x} = \vec{A}^{-1}\vec{t}\\
-\vec{A^{-1}} =\myvec{-\frac{2}{x} & \frac{1}{x} \\ \frac{3}{2y} & -\frac{1}{2y}}\\
-\vec{t} = \myvec{x^2 + 2y^2 \\ 3x^2 + 4y^2}\\
+\vec{A^{-1}} =\myvec{-\frac{2}{x_1} & \frac{1}{x_1} \\ \frac{3}{2x_2} & -\frac{1}{2x_2}}\\
+\vec{t} = \myvec{x_1^2 + 2x_2^2 \\ 3x_1^2 + 4x_2^2}\\
 \intertext{Let consider another matrix $\vec{y}$ as : }
-\vec{y} = \myvec{5x \\7y}
+\vec{y} = \myvec{5x_1 \\7x_2}
 \end{align}
 Now,
 \begin{multline}
-\langle \vec{y},(\vec{A^{-1}}\vec{t}) \rangle =\vec{y}^T(\vec{A}^{-1}\vec{t}) = \myvec{5x & 6y}\myvec{x \\ y}  = 5x^2 + 6y^2 \label{3.7}
+\langle \vec{y},(\vec{A^{-1}}\vec{t}) \rangle =\vec{y}^T(\vec{A}^{-1}\vec{t}) = \myvec{5x_1 & 6{x_2}}\myvec{x_1 \\ x_2}  = 5x_1^2 + 6{x_2}^2 \label{3.7}
 \end{multline}
 And,
 \begin{multline}
-\langle   (\vec{A}^{-1})^T\vec{y}, \vec{t} \rangle = ((\vec{A}^{-1})^T\vec{y})^T \vec{t} = \myvec{-1 & 2}\myvec{x^2 +2y^2 \\3x^2 +4y^2}\\ = 5x^2 + 6y^2 \label{3.8}
+\langle   (\vec{A}^{-1})^T\vec{y}, \vec{t} \rangle = ((\vec{A}^{-1})^T\vec{y})^T \vec{t} = \myvec{-1 & 2}\myvec{x_1^2 +2{x_2}^2 \\3x_1^2 +4{x_2}^2}\\ = 5x_1^2 + 6{x_2}^2 \label{3.8}
 \end{multline}
 Hence from \eqref{3.7} and \eqref{3.8} we can conclude,
 \begin{align}
